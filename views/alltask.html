@@ -1,0 +1,45 @@
+<html>
+    <style>
+    table {
+        width: 100%;
+    }
+
+    table,
+    th,
+    td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td{
+        padding: 15px;
+        text-align: left;
+    }
+    </style>
+    <body>
+        <a href='/'>Home</a>
+        <h2> To Do List:
+            <table>
+                <tr>
+                    <td>Task Name</td>
+                    <td>Task Due Date</td>
+                    <td>Task Description</td>
+                </tr>
+                <% for (var i=0; i<tasks.length; i++){%>
+                    <tr>
+                        <td>
+                            <%= tasks[i].taskName %>
+                        </td>
+                        <td>
+                            <%= tasks[i].taskDueDate %>
+                        </td>
+                        <td>
+                            <%= tasks[i].taskDesc %>
+                        </td>
+                </tr>
+                <%}%>
+            </table>
+    </h2></h2>
+    </body>
+</html>
